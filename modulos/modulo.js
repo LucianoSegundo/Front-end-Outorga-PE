@@ -1,0 +1,1 @@
+import trocarTela from "./trocarTela.js";
