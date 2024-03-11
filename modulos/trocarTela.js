@@ -12,7 +12,7 @@ let trocaTela = function (atual, novo) {
 
 ircadastar.addEventListener("click", function (event) {
     event.preventDefault();
-    trocaTela(TelaLog, telaCad,)
+    trocaTela(TelaLog, telaCad)
 }
 );
 
@@ -41,4 +41,4 @@ cadastrar.addEventListener("submit", function (event) {
 
 
 
-export default { ircadastar, irlogar };
+export default { ircadastar, irlogar, trocaTela };

@@ -37,6 +37,7 @@
 #login form{
     display: flex;
     flex-direction: column;
+
 }
 
 #login label{
@@ -46,6 +47,7 @@
 #login input[type="email"],
 #login input[type="password"]{
     padding: 8px;
+    width: 40vw;
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -54,6 +56,8 @@
 
 #login button{
     padding: 10px;
+    width: 40vw;
+    margin-top: 10vw;
     background-color: #4caf50; /* verde */
     color: white;
     border: none;
