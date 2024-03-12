@@ -1,4 +1,4 @@
-//trocar telas
+
 let ircadastar = document.getElementById("irCad");
 let irlogar = document.getElementById("irLog");
 let telaCad = document.getElementById("cadastro");
@@ -21,24 +21,6 @@ irlogar.addEventListener("click", function (event) {
     trocaTela(telaCad, TelaLog)
 }
 );
-
-// cadastrar usuário
-
-let registrar= function () {
-    console.log("carlalho");
-}
-
-let cadastrar = document.getElementById("form-Cadastro");
-
-cadastrar.addEventListener("submit", function (event) {
-    event.preventDefault();
-    registrar();
-    trocaTela(telaCad, TelaLog);
-    cadastrar.reset();
-
-});
-
-
 
 
 export default { ircadastar, irlogar, trocaTela };

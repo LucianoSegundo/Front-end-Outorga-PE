@@ -2,9 +2,10 @@ import trocarTela from "./trocarTela.js";
 let fomrLogin = document.getElementById("form-Login");
 
 
-fomrLogin.addEventListener("submit", function (event) {
+fomrLogin.addEventListener("submit", async function (event) {
     event.preventDefault();
-   
+
+    // montando json que será enviado
     let email = document.getElementById('email').value;
     let senha = document.getElementById('senha').value;
 
@@ -12,10 +13,21 @@ fomrLogin.addEventListener("submit", function (event) {
         email: email,
         senha: senha
     };
+    // enviando json  e guardando saida
+    let tokenn = await enviarDados('', dados, "login não permitido");
 
-    enviarDados('', dados);
+     if (token!=null) {
+         let telaCad = document.getElementById("cadastro");
+         let TelaLog = document.getElementById("login");
+         let telaPrincipal = document.getElementById("principal");
+     
+         localStorage.setItem(token, JSON.stringify(tokenn));
+         trocarTela.trocaTela(TelaLog, telaPrincipal)
+        
+     }
+     fomrLogin.reset();
 })
-let enviarDados = async function (url, dados) {
+let enviarDados = async function (url, dados, mensagemERRO) {
 
 
     try {
@@ -28,17 +40,15 @@ let enviarDados = async function (url, dados) {
         });
 
         if (!resposta.ok) {
-            throw new Error('Erro ao enviar requisição, login não permitido.');
+            throw new Error('Erro ao enviar requisição, '+ mensagemERRO + '.');
+            alert(mensagemERRO);
         }
+        if (resposta.status == 200) {
+            const token = await resposta.json();
+            return token;
+        }
+        else return null;
 
-        const token = await resposta.json();
-
-        let telaCad = document.getElementById("cadastro");
-        let TelaLog = document.getElementById("login");
-        let telaPrincipal = document.getElementById("principal");
-
-        trocarTela.trocaTela(TelaLog, telaPrincipal)
-        localStorage.setItem(token, JSON.stringify(token));
 
         console.log('Requisição enviada com sucesso:', data);
     } catch (error) {
@@ -46,4 +56,4 @@ let enviarDados = async function (url, dados) {
     }
 }
 
-export default { fomrLogin };
+export default { fomrLogin, enviarDados, trocarTela };

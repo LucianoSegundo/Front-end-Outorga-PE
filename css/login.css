@@ -14,7 +14,7 @@
 }
 
 #login form{
-    width: 70vw;
+    width: 42vw;
     gap: 1vh;
 }
 
@@ -68,4 +68,9 @@
 
 #login button:hover{
     background-color: #45a049; /* tom mais escuro de verde */
+}
+
+div p{
+margin-top: 5vh;
+
 }
