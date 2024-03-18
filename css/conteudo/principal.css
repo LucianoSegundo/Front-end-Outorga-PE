@@ -1,0 +1,36 @@
+@import url(Alterardados.css);
+
+#principal {
+    display: none;
+    /*  display: flex; */
+    height: 96vh;
+    width: 100vw;
+    display: flex;
+    justify-content: start;
+
+}
+
+#barraInterna {
+    display: none;
+    /*  display: flex; */
+    width: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+#barraInterna button {
+    background-color: #4caf50;
+    border: none;
+    height: 100%;
+    width: 12%;
+
+}
+
+#barraInterna button:hover {
+    background-color: #77c07a;
+}
+
+#conteudo {
+    width: 100vw;
+    height: 94vh;
+}
