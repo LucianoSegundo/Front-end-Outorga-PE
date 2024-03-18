@@ -1,14 +1,15 @@
 @import url(Alterardados.css);
+@import url(consultarOutorgas.css);
 
 #principal {
     display: none;
     /*  display: flex; */
     height: 96vh;
     width: 100vw;
-    display: flex;
     justify-content: start;
 
 }
+
 
 #barraInterna {
     display: none;

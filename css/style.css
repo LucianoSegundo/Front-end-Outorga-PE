@@ -10,7 +10,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f8ea; /* verde claro */
+    /*  background-color: #f0f8ea;verde claro */
+    background-color: #d9eccb;
 }
 .barra{
    

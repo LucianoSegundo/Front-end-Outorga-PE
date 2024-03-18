@@ -1,0 +1,29 @@
+#consultar{
+    display: none;
+    justify-content: center;
+ 
+}
+#listaPedidos{
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    height: 92vh;
+    width: 66vw;
+    background-color:#c3dfaf;
+    padding: 2vh 0px;
+
+}
+.card{
+
+    font-size: 60%;
+    background-color: #71be73;
+    width: 21rem;
+    height: 8rem;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     padding-left: 1rem;
+}
+.card:hover{
+    border: solid 1px;
+}
