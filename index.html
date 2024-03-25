@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="https://th.bing.com/th/id/OIP.SjqkgnYEnZ5bmJ4mSB182gHaE9?rs=1&pid=ImgDetMain"
         type="image/x-icon">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script type="module" src="modulos/modulo.js"></script>
 </head>
 
@@ -88,7 +89,68 @@
     <div id="principal">
 
         <div id="conteudo">
-            <div id="solicitar"></div>
+            <div id="solicitar">
+                <form id="form-solicitacao">
+                    
+                    <label for="modalidade">Modalidade de Interferência:</label><br>
+                    <input type="radio" class="ecessao" id="subterranea" name="modalidade" value="subterranea" required>
+                    <label for="subterranea">Subterrânea</label><br>
+                    <input type="radio" class="ecessao" id="superficial" name="modalidade" value="superficial" required>
+                    <label for="superficial">Superficial</label><br>
+                    
+                    <fieldset>
+
+                        <label for="nome">Nome do Imóvel:</label><br>
+                        <input type="text" id="solici-nome" name="solici-nome" required><br>
+                        
+                        <label for="cep">CEP:</label><br>
+                        <input type="text" id="solici-cep" name="solici-cep" required><br>
+                    </fieldset>
+                            
+                            <fieldset>
+
+                                <label for="logradouro">Logradouro:</label><br>
+                                <input type="text" id="solici-logradouro" name="solici-logradouro"><br>
+                                
+                                
+                                <label for="cidade">Cidade:</label><br>
+                                <input type="text" id="solici-cidade" name="solici-cidade" required><br>
+                            </fieldset>
+                        
+                        <div id="map"></div>
+                        <fieldset>
+                            
+                            <label for="latitude">Latitude:</label><br>
+                            <input type="text" id="solici-latitude" name="solici-latitude" required><br>
+                            
+                            
+                            <label for="longitude">Longitude:</label><br>
+                            <input type="text" id="solici-longitude" name="solici-longitude" required><br>
+                        </fieldset>
+                       
+                    
+                    
+                
+                    <label for="finalidade">Finalidade do Uso:</label><br>
+                    <select id="finalidade" name="finalidade" required>
+                        <option value="">Selecione...</option>
+                        <option value="irrigacao">Irrigação</option>
+                        <option value="consumo_animal">Consumo Animal</option>
+                        <option value="consumo_humano">Consumo Humano</option>
+                        <option value="abastecimento_publico">Abastecimento Público</option>
+                        <option value="aquicultura">Aquicultura</option>
+                        <option value="industria">Indústria</option>
+                        <option value="extracao_mineral">Extração Mineral</option>
+                        <option value="desassoreamento">Desassoreamento</option>
+                    </select><br>
+                
+                
+                    <input type="submit" value="Enviar">
+                
+            </form>
+            
+
+            </div>
             <div id="alterar">
                 <form id="Alterar-Form">
 
@@ -135,14 +197,14 @@
             <div id="consultar">
 
                 <div id="listaPedidos">
-                      <div class="card">
-                            <h1>Numero processo: #126789</h1>
-                            <h1>Status: Aguardando</h1>
-                            <h1>data abertura: 21/12/2001</h1>
-                      </div>
-                      
+                    <div class="card">
+                        <h1>Numero processo: #126789</h1>
+                        <h1>Status: Aguardando</h1>
+                        <h1>data abertura: 21/12/2001</h1>
+                    </div>
+
                 </div>
-                
+
             </div>
         </div>
     </div>

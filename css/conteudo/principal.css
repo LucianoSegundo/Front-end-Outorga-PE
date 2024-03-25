@@ -1,8 +1,9 @@
 @import url(Alterardados.css);
 @import url(consultarOutorgas.css);
+@import url(solicitarOutorga.css);
 
 #principal {
-    display: none;
+    display: flex;
     /*  display: flex; */
     height: 96vh;
     width: 100vw;

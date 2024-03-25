@@ -1,6 +1,7 @@
 @import url(login.css);
 @import url(cadastro.css);
 @import url(conteudo/principal.css);
+@import url(https://unpkg.com/leaflet/dist/leaflet.css);
 body {
     font-family: Arial, sans-serif;
     margin: 0;
