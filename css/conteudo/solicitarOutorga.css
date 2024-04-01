@@ -1,6 +1,6 @@
 #solicitar{
     height: 96vh;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }

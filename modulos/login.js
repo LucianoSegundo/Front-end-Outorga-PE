@@ -15,14 +15,17 @@ fomrLogin.addEventListener("submit", async function (event) {
     };
     // enviando json  e guardando saida
     let tokenn = await enviarDados('', dados, "login não permitido");
-
+    
+    //se o login foi autorizado, armazena-se o token e avança para tela de login.
      if (token!=null) {
-         let telaCad = document.getElementById("cadastro");
+         let barraInterna = document.getElementById("barraInterna");
          let TelaLog = document.getElementById("login");
          let telaPrincipal = document.getElementById("principal");
      
          localStorage.setItem(token, JSON.stringify(tokenn));
-         trocarTela.trocaTela(TelaLog, telaPrincipal)
+
+         trocarTela.trocaTela(TelaLog, telaPrincipal);
+         barraInterna.style.display = "flex";
         
      }
      fomrLogin.reset();
